@@ -4,7 +4,7 @@ import { create } from "storybook/theming";
 const iceTheme = create({
   base: "dark",
   brandTitle: "Ice Design System",
-  brandUrl: "https://ice.dev",
+  brandUrl: "https://vicentereyes.org",
   brandTarget: "_self",
 
   colorPrimary: "#7ED957",
