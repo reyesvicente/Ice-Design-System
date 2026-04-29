@@ -8,7 +8,8 @@
     "build": "tsc && vite build",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "chromatic": "npx chromatic --project-token=chpt_da72a8f6775ea4e"
   },
   "dependencies": {
     "@fontsource-variable/inter": "^5.1.0",
