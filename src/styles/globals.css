@@ -1,0 +1,48 @@
+@import "@fontsource-variable/space-grotesk";
+@import "@fontsource-variable/inter";
+@import "@fontsource-variable/jetbrains-mono";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: theme("fontFamily.sans");
+  }
+
+  body {
+    @apply bg-neo-offwhite text-neo-black antialiased;
+  }
+
+  .dark body {
+    @apply bg-neo-black text-neo-offwhite;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: theme("fontFamily.display");
+    font-weight: 700;
+  }
+
+  code,
+  pre {
+    font-family: theme("fontFamily.mono");
+  }
+
+  ::selection {
+    @apply bg-neo-yellow text-neo-black;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-4 ring-neo-pink ring-offset-2 ring-offset-neo-offwhite;
+  }
+
+  .dark :focus-visible {
+    @apply ring-offset-neo-black;
+  }
+}

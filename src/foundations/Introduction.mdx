@@ -1,0 +1,43 @@
+import { Meta } from "@storybook/blocks";
+
+<Meta title="Introduction" />
+
+<div style={{ padding: "2rem 0", fontFamily: "'Inter Variable', system-ui, sans-serif" }}>
+
+# ICE DS — Design System
+
+**Owner:** Ice — Freelance Full-Stack Developer
+**Direction:** Neubrutalism with modern polish. Multi-color, playful, disciplined.
+**Stack:** React + Vite + TailwindCSS + CVA + Radix UI.
+
+---
+
+## What's in here
+
+- **Foundations** — Colors, Typography, Shadows. The tokens the rest of the system composes from.
+- **Components** — Button, Badge, Card, Input, Alert, Modal, Table. Every variant rendered. Every state visible.
+
+## How to use this
+
+Think of Storybook as the **QA surface**. Before shipping any new component or variant:
+
+1. Add a story for it.
+2. Verify it against the design system rules (see `ICE_DESIGN_SYSTEM.md`).
+3. Check the a11y panel — every component must pass at AA minimum.
+4. Screenshot the Overview story for visual regression.
+
+## Core rules (drilled in)
+
+- **Always `neo-black` text on colored surfaces.** Never white on yellow/blue/green/pink/purple.
+- **`neo-pink` and `neo-purple` are decorative.** Never use them for semantic signals (success/error/info).
+- **Hard offset shadows, no blur.** Use `shadow-brutal-*` tokens only — never invent new offsets.
+- **Hover lifts by exact pixels.** Translate -2/-2, shadow grows. Active collapses both to 0.
+- **No italics. Bold for emphasis.**
+
+## Useful shortcuts
+
+- `cn()` — merge classes safely (handles Tailwind conflicts). Use it in every component.
+- `cva()` — define variant styles declaratively. All variant components use it.
+- `forwardRef` — every component forwards refs. Don't break this pattern.
+
+</div>
