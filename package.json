@@ -2,6 +2,7 @@
   "name": "ice-ds",
   "version": "1.0.1",
   "type": "module",
+  "license": "MIT",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
