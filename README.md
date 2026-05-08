@@ -21,7 +21,40 @@ pnpm add ice-ds
 npm install react react-dom
 ```
 
-## Setup
+## CDN (jsDelivr)
+
+Use ice-ds directly in any HTML page — no bundler required. React and ReactDOM must be loaded first.
+
+```html
+<!-- 1. React -->
+<script crossorigin src="https://cdn.jsdelivr.net/npm/react@18/umd/react.production.min.js"></script>
+<script crossorigin src="https://cdn.jsdelivr.net/npm/react-dom@18/umd/react-dom.production.min.js"></script>
+
+<!-- 2. ice-ds styles -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ice-ds@1.0.3/dist/style.css" />
+
+<!-- 3. ice-ds UMD bundle -->
+<script src="https://cdn.jsdelivr.net/npm/ice-ds@1.0.3/dist/ice-ds.umd.js"></script>
+```
+
+Components are then available on the `IceDS` global:
+
+```html
+<script>
+  const { Button, Badge } = IceDS;
+  const e = React.createElement;
+
+  ReactDOM.createRoot(document.getElementById('root')).render(
+    e(Button, { variant: 'primary' }, 'Hello from ice-ds')
+  );
+</script>
+```
+
+> **Pin to a version** — replace `@1.0.3` with the exact version you tested against so future releases don't break your pages.
+
+---
+
+## Setup (npm)
 
 ### 1. Import the stylesheet
 
