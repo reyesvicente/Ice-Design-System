@@ -12,8 +12,12 @@ export default defineConfig({
     lib: {
       entry: fileURLToPath(new URL("src/index.ts", import.meta.url)),
       name: "IceDS",
-      formats: ["es", "cjs"],
-      fileName: (format) => `index.${format === "es" ? "js" : "cjs"}`,
+      formats: ["es", "cjs", "umd"],
+      fileName: (format) => {
+        if (format === "es") return "index.js";
+        if (format === "cjs") return "index.cjs";
+        return "ice-ds.umd.js";
+      },
     },
     rollupOptions: {
       external: ["react", "react-dom"],
