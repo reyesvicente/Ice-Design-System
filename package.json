@@ -1,6 +1,6 @@
 {
   "name": "ice-ds",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "type": "module",
   "license": "MIT",
   "main": "./dist/index.cjs",
@@ -22,7 +22,7 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build && npm run build:css",
+    "build": "tsc && vite build && npm run build:css && node scripts/copy-fonts.js",
     "build:css": "tailwindcss -i ./src/styles/globals.css -o ./dist/style.css --minify",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
