@@ -108,6 +108,14 @@ export {
 } from "./components/Dropdown/Dropdown";
 
 export {
+  FileInput,
+  fileInputVariants,
+  formatFileSize,
+  type FileInputProps,
+  type FileRejection,
+} from "./components/FileInput/FileInput";
+
+export {
   Kbd,
   Shortcut,
   kbdVariants,

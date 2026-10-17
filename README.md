@@ -177,6 +177,23 @@ import { Input, Textarea, Select, Label, Field } from 'ice-ds';
 </Field>
 ```
 
+### FileInput
+
+```tsx
+import { FileInput } from 'ice-ds';
+
+<FileInput
+  accept="image/*,.pdf"
+  multiple
+  maxSize={5 * 1024 * 1024}
+  description="PNG, JPG or PDF up to 5 MB"
+  onFilesChange={(files) => console.log(files)}
+  onReject={(rejections) => console.log(rejections)} // [{ file, reason: 'type' | 'size' }]
+/>
+```
+
+Drag-and-drop or click to browse. Selected files are listed with remove buttons, and the native input stays in sync so it works in plain `<form>` submits. Pass `aria-invalid` for the error state.
+
 ### Checkbox
 
 ```tsx
@@ -579,7 +596,7 @@ shadow-brutal-xl   →  14px 14px 0 0 #0F0F0F
 | Category | Components |
 |---|---|
 | **Basic** | Button, Badge, Card, Alert |
-| **Form** | Input, Textarea, Select, Label, Field, Checkbox, Radio, Switch |
+| **Form** | Input, Textarea, Select, Label, Field, FileInput, Checkbox, Radio, Switch |
 | **Dialog** | Modal, Drawer, Dropdown, Popover |
 | **Navigation** | Navbar, Breadcrumb, Tabs, Pagination |
 | **Data Display** | Table, Stat, Progress, Slider, Avatar, Accordion |
