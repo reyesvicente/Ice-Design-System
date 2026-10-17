@@ -4,7 +4,7 @@ import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/cn";
 
 // Shared base styles for input-like fields
-const fieldBase = cva(
+export const fieldVariants = cva(
   [
     "w-full px-4 py-3",
     "bg-neo-offwhite text-neo-black placeholder:text-neo-black/50",
@@ -31,14 +31,14 @@ const fieldBase = cva(
 
 export interface InputProps
   extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "size">,
-    VariantProps<typeof fieldBase> {}
+    VariantProps<typeof fieldVariants> {}
 
 export const Input = forwardRef<HTMLInputElement, InputProps>(
   ({ className, size, type = "text", ...props }, ref) => (
     <input
       ref={ref}
       type={type}
-      className={cn(fieldBase({ size }), className)}
+      className={cn(fieldVariants({ size }), className)}
       {...props}
     />
   )
@@ -49,13 +49,13 @@ Input.displayName = "Input";
 
 export interface TextareaProps
   extends Omit<React.TextareaHTMLAttributes<HTMLTextAreaElement>, "size">,
-    VariantProps<typeof fieldBase> {}
+    VariantProps<typeof fieldVariants> {}
 
 export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
   ({ className, size, ...props }, ref) => (
     <textarea
       ref={ref}
-      className={cn(fieldBase({ size }), "min-h-[120px] resize-y", className)}
+      className={cn(fieldVariants({ size }), "min-h-[120px] resize-y", className)}
       {...props}
     />
   )
@@ -66,14 +66,14 @@ Textarea.displayName = "Textarea";
 
 export interface SelectProps
   extends Omit<React.SelectHTMLAttributes<HTMLSelectElement>, "size">,
-    VariantProps<typeof fieldBase> {}
+    VariantProps<typeof fieldVariants> {}
 
 export const Select = forwardRef<HTMLSelectElement, SelectProps>(
   ({ className, size, children, ...props }, ref) => (
     <div className="relative">
       <select
         ref={ref}
-        className={cn(fieldBase({ size }), "appearance-none pr-10", className)}
+        className={cn(fieldVariants({ size }), "appearance-none pr-10", className)}
         {...props}
       >
         {children}

@@ -28,6 +28,8 @@ const preview: Preview = {
           ["Colors", "Typography", "Shadows"],
           "Components",
           ["Button", "Badge", "Card", "Input", "Alert", "Modal", "Table"],
+          "Blocks",
+          ["Landing Page"],
         ],
       },
     },

@@ -15,6 +15,7 @@ export {
   Select,
   Label,
   Field,
+  fieldVariants,
   type InputProps,
   type TextareaProps,
   type SelectProps,
@@ -250,6 +251,114 @@ export {
   type StatProps,
   type StatTrend,
 } from "./components/Stat/Stat";
+
+// ─── App & data components ────────────────────────────────────────────────────
+export {
+  AppShell,
+  AppShellHeader,
+  AppShellMenuButton,
+  Sidebar,
+  SidebarHeader,
+  SidebarContent,
+  SidebarFooter,
+  SidebarGroup,
+  SidebarGroupLabel,
+  SidebarItem,
+  SidebarCollapseButton,
+  useSidebar,
+  type AppShellProps,
+  type SidebarItemProps,
+} from "./components/Sidebar/Sidebar";
+
+export {
+  DataTable,
+  type DataTableProps,
+  type DataTableColumn,
+  type DataTableSort,
+  type DataTableSortDirection,
+} from "./components/DataTable/DataTable";
+
+export {
+  Combobox,
+  type ComboboxProps,
+  type ComboboxOption,
+} from "./components/Combobox/Combobox";
+
+export {
+  Calendar,
+  DatePicker,
+  DateRangePicker,
+  type CalendarProps,
+  type DatePickerProps,
+  type DateRangePickerProps,
+  type DateRange,
+  type DateRangePreset,
+} from "./components/DatePicker/DatePicker";
+
+export {
+  CommandPalette,
+  type CommandPaletteProps,
+  type CommandItem,
+} from "./components/CommandPalette/CommandPalette";
+
+export { InputGroup, type InputGroupProps } from "./components/InputGroup/InputGroup";
+
+export { TagInput, type TagInputProps } from "./components/TagInput/TagInput";
+
+export {
+  Stepper,
+  type StepperProps,
+  type StepperStep,
+  type StepStatus,
+} from "./components/Stepper/Stepper";
+
+export {
+  ToggleGroup,
+  ToggleGroupItem,
+  toggleGroupVariants,
+  toggleGroupItemVariants,
+  type ToggleGroupProps,
+  type ToggleGroupItemProps,
+} from "./components/ToggleGroup/ToggleGroup";
+
+export {
+  Banner,
+  BannerLink,
+  bannerVariants,
+  type BannerProps,
+} from "./components/Banner/Banner";
+
+// ─── Landing page blocks ──────────────────────────────────────────────────────
+export {
+  Section,
+  SectionHeading,
+  sectionVariants,
+  type SectionProps,
+  type SectionHeadingProps,
+} from "./blocks/Section/Section";
+export { Hero, type HeroProps } from "./blocks/Hero/Hero";
+export {
+  FeatureGrid,
+  FeatureCard,
+  type FeatureGridProps,
+  type FeatureCardProps,
+} from "./blocks/FeatureGrid/FeatureGrid";
+export {
+  PricingTable,
+  PricingCard,
+  type PricingTableProps,
+  type PricingCardProps,
+  type PricingFeature,
+} from "./blocks/Pricing/Pricing";
+export { Testimonial, type TestimonialProps } from "./blocks/Testimonial/Testimonial";
+export { CTASection, type CTASectionProps } from "./blocks/CTASection/CTASection";
+export {
+  Footer,
+  type FooterProps,
+  type FooterColumn,
+  type FooterLink,
+  type FooterSocialLink,
+} from "./blocks/Footer/Footer";
 
 // ─── Utilities & tokens ───────────────────────────────────────────────────────
 export { cn } from "./lib/cn";

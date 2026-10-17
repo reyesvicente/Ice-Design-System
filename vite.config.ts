@@ -39,6 +39,7 @@ export default defineConfig({
           "@radix-ui/react-switch": "RadixSwitch",
           "@radix-ui/react-tabs": "RadixTabs",
           "@radix-ui/react-toast": "RadixToast",
+          "@radix-ui/react-toggle-group": "RadixToggleGroup",
           "@radix-ui/react-tooltip": "RadixTooltip",
         },
       },
