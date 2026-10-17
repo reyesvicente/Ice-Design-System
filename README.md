@@ -23,7 +23,7 @@ npm install react react-dom
 
 ## CDN (jsDelivr)
 
-Use ice-ds directly in any HTML page — no bundler required. React and ReactDOM must be loaded first.
+Use ice-ds directly in any HTML page — no bundler required. Load React 18 and ReactDOM first; everything else (Radix, the JSX runtime, icons) is already inside the bundle.
 
 ```html
 <!-- 1. React -->
@@ -31,10 +31,10 @@ Use ice-ds directly in any HTML page — no bundler required. React and ReactDOM
 <script crossorigin src="https://cdn.jsdelivr.net/npm/react-dom@18/umd/react-dom.production.min.js"></script>
 
 <!-- 2. ice-ds styles -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ice-ds@1.1.0/dist/style.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ice-ds@1.1.1/dist/style.css" />
 
 <!-- 3. ice-ds UMD bundle -->
-<script src="https://cdn.jsdelivr.net/npm/ice-ds@1.1.0/dist/ice-ds.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/ice-ds@1.1.1/dist/ice-ds.umd.js"></script>
 ```
 
 Components are then available on the `IceDS` global:
@@ -50,7 +50,9 @@ Components are then available on the `IceDS` global:
 </script>
 ```
 
-> **Pin to a version** — replace `@1.1.0` with the exact version you tested against so future releases don't break your pages.
+> **Pin to a version** — replace `@1.1.1` with the exact version you tested against so future releases don't break your pages.
+>
+> **Use 1.1.1 or later for CDN pages.** The UMD bundle in 1.0.4–1.1.0 expects Radix and the JSX runtime as globals that CDN pages can't provide, so it fails to render. 1.0.3 and earlier are unaffected.
 
 ---
 
